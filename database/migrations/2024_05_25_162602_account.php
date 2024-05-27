@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('pwd',45);
             $table->string('nome',45);
             $table->string('cognome',45);
-            $table->dateTime('dataDiNascita');
+            $table->date('dataDiNascita');
             $table->integer('tipoAccount');
         });
 
