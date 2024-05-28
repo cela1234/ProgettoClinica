@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create("clinico", function (Blueprint $table) {
             $table->unsignedBigInteger("idAccount")->primary();
-            $table->string("specializzazione", 45);
+            $table->string("specializzazione");
             $table->string("ruolo",45);
             $table->foreign('idAccount')->references('id')->on('accounts')->onDelete('cascade');
         });

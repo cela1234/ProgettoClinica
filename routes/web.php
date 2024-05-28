@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'home')
     ->name('home');
 
-Route::view('/who', 'login')
+Route::view('/who', 'home')
     ->name('who');
 
-Route::view('/faq', 'login')
+Route::view('/faq', 'home')
     ->name('faq');
+
+
+require __DIR__.'/auth.php';

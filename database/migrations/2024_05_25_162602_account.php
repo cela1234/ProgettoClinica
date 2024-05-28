@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('account', function (Blueprint $table) {
             $table->id();
             $table->string('username', 45)->unique();
-            $table->string('pwd',45);
-            $table->string('nome',45);
-            $table->string('cognome',45);
+            $table->string('pwd');
+            $table->string('nome');
+            $table->string('cognome');
             $table->date('dataDiNascita');
-            $table->integer('tipoAccount');
+            $table->integer('tipoAccount'); // 1 = paziente, 2 = clinico, 3 = admin; cosi segue la logica dei livelli
         });
 
     }

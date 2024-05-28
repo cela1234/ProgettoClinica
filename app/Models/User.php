@@ -1,5 +1,5 @@
 <?php
-
+// NON SO SE POSSO CANCELLARLO ED USARE DIRETTAMENTE ACCOUNT (LO PREFERIREI)
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;

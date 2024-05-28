@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Login')
+@section('title', 'Home')
 
 @section('content')
 <div class="static">
