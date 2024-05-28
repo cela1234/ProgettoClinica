@@ -26,5 +26,5 @@ class DatabaseSeeder extends Seeder
         DB::table('listaFarmaci')->insert([['nome'=>'test','descrizione'=> 'testtestest']]);
         DB::table('listaTerapieRiabilitative')->insert([['nome'=> 'test', 'descrizione'=> 'testtestest']]);
         DB::table('listaDisturbiMotori')->insert([['nome'=> 'test', 'descrizione'=> 'testtestest']]);
-}
+    }
 }
