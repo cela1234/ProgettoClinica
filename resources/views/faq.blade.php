@@ -13,13 +13,13 @@
     <div class="container-faq">
         @foreach ($faqs as $faq)
         <div onclick="toggleAnswer('{{$faq->id}}')">
-            <h2 id="question{{$faq->id}}" class="question">{{$faq->question}}</h2>
-            <h3 id="answer{{$faq->id}}" class="answer" style="display: none;">{{$faq->answer}}</h3>
+            <h2 id="question{{$faq->id}}" class="question">{{$faq->domanda}}</h2>
+            <h3 id="answer{{$faq->id}}" class="answer" style="display: none;">{{$faq->risposta}}</h3>
         </div>
         @auth
         @if (auth()->user()->isAdmin())
         <div>
-            <button class="btn-edit" onclick="openEditPopup('{{$faq->id}}', '{{$faq->topic}}', '{{$faq->question}}', '{{$faq->answer}}')">Modifica FAQ</button>
+            <button class="btn-edit" onclick="openEditPopup('{{$faq->id}}', '{{$faq->domanda}}', '{{$faq->risposta}}')">Modifica FAQ</button>
             <a class="btn-delete" href="{{ route('faq.delete', [$faq->id]) }}">Elimina FAQ</a>
         </div>
         @endif
@@ -37,14 +37,11 @@
         <h2>Nuova FAQ</h2>
         <form id="addFaqForm" action="{{ route('faq.store') }}" method="POST">
             @csrf
-            <label for="topic">Argomento:</label>
-            <input type="text" id="topic" name="topic" required>
+            <label for="domanda">Domanda:</label>
+            <textarea id="domanda" name="domanda" required></textarea>
 
-            <label for="question">Domanda:</label>
-            <textarea id="question" name="question" required></textarea>
-
-            <label for="answer">Risposta:</label>
-            <textarea id="answer" name="answer" required></textarea>
+            <label for="risposta">Risposta:</label>
+            <textarea id="risposta" name="risposta" required></textarea>
 
             <button type="submit">Invia</button>
             <button type="button" onclick="closeAddPopup()">Annulla</button>
@@ -58,14 +55,11 @@
             @csrf
             <input type="hidden" id="editFaqId" name="id">
 
-            <label for="editTopic">Argomento:</label>
-            <input type="text" id="editTopic" name="topic" required>
+            <label for="editDomanda">Domanda:</label>
+            <textarea id="editDomanda" name="domanda" required></textarea>
 
-            <label for="editQuestion">Domanda:</label>
-            <textarea id="editQuestion" name="question" required></textarea>
-
-            <label for="editAnswer">Risposta:</label>
-            <textarea id="editAnswer" name="answer" required></textarea>
+            <label for="editRisposta">Risposta:</label>
+            <textarea id="editRisposta" name="risposta" required></textarea>
 
             <button type="submit">Salva</button>
             <button type="button" onclick="closeEditPopup()">Annulla</button>

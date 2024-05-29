@@ -12,18 +12,16 @@ class FaqController extends Controller
 
     public function store(Request $request) {
         $faq = new Faq;
-        $faq->topic = $request->input('topic');
-        $faq->question = $request->input('question');
-        $faq->answer = $request->input('answer');
+        $faq->domanda = $request->input('domanda');
+        $faq->risposta = $request->input('risposta');
         $faq->save();
         return redirect()->route('faq.index');
     }
 
     public function update(Request $request) {
         $faq = Faq::find($request->input('id'));
-        $faq->topic = $request->input('topic');
-        $faq->question = $request->input('question');
-        $faq->answer = $request->input('answer');
+        $faq->domanda = $request->input('domanda');
+        $faq->risposta = $request->input('risposta');
         $faq->save();
         return redirect()->route('faq.index');
     }
