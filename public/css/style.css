@@ -104,3 +104,95 @@ main {
     text-decoration: underline;
     color: #1d7a1d; /* Slightly darker green for hover effect */
 }
+.container-faq-completo {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-legenda h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container-legenda a {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container-legenda a:hover {
+    text-decoration: underline;
+}
+
+.container-faq h2 {
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup h2 {
+    margin-top: 0;
+}
+
+.popup form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.popup form textarea, .popup form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup form button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup form button[type="button"] {
+    background-color: #ccc;
+}
+
+.btn-edit, .btn-delete, .btn-add {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: #fff;
+}
