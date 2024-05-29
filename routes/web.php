@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqControllertp;
+use App\Http\Controllers\ClinicoController;
+use App\Http\Controllers\PazienteController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +24,7 @@ Route::view('/', 'home')
 Route::view('/who', 'home')
     ->name('who');
 
-Route::view('/faq', 'home')
+Route::view('/faq', 'faq')
     ->name('faq');
 
 
