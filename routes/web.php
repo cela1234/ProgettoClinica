@@ -22,7 +22,7 @@ Route::get('/faq/delete/{id}', [FaqController::class, 'destroy'])->name('faq.del
 Route::view('/', 'home')
     ->name('home');
 
-Route::view('/who', 'home')
+Route::view('/who', 'who')
     ->name('who');
 
 //Route::view('/faq', 'faq')

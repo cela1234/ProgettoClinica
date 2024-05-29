@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Faq;
-
 class FaqController extends Controller
 {
+   
+
+
+
+
+
     public function index() {
         $faqs = Faq::all(); // Recupera tutte le FAQ dal database
         return view('faq', compact('faqs')); // Passa le FAQ alla vista
@@ -34,3 +39,5 @@ class FaqController extends Controller
         return redirect()->route('faq.index');
     }
 }
+
+
