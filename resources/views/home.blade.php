@@ -64,11 +64,11 @@
 <body>
 
 <div class="navbar">
-  <a href="#home">Home</a>
+  <a href="home">Home</a>
   <div class="right">
     <a href="login" class="button">Login</a>
     <a href="faq" class="button">FAQ</a>
-    <a href="about" class="button">Chi Siamo</a>
+    <a href="who" class="button">Chi Siamo</a>
   </div>
 </div>
 

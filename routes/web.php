@@ -25,7 +25,7 @@ Route::view('/', 'home')
 Route::view('/who', 'home')
     ->name('who');
 
-Route::view('/faq', 'home')
+Route::view('/faq', 'faq')
     ->name('faq');
 
 
