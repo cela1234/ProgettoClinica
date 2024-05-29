@@ -25,8 +25,8 @@ Route::view('/', 'home')
 Route::view('/who', 'home')
     ->name('who');
 
-Route::view('/faq', 'faq')
-    ->name('faq');
+//Route::view('/faq', 'faq')
+    //->name('faq');
 
 
 require __DIR__.'/auth.php';
