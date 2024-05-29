@@ -1,12 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FaqControllertp;
-use App\Http\Controllers\ClinicoController;
-use App\Http\Controllers\PazienteController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FaqController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,13 +13,19 @@ use App\Http\Controllers\FaqController;
 |
 */
 
+//faq
+Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+Route::post('/faq/store', [FaqController::class, 'store'])->name('faq.store');
+Route::post('/faq/update', [FaqController::class, 'update'])->name('faq.update');
+Route::get('/faq/delete/{id}', [FaqController::class, 'destroy'])->name('faq.delete');
+
 Route::view('/', 'home')
     ->name('home');
 
 Route::view('/who', 'home')
     ->name('who');
 
-Route::view('/faq', 'faq')
+Route::view('/faq', 'home')
     ->name('faq');
 
 
