@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create("terapiePrescritte", function (Blueprint $table) {
             $table->unsignedBigInteger("idAccountPaziente");
             $table->unsignedBigInteger("idTerapia");
-            $table->boolean("Nuovo");
+            $table->boolean("nuovo");
             $table->primary(["idAccountPaziente","idTerapia"]);
             $table->foreign("idAccountPaziente")->references("idAccount")->on("Paziente");
             $table->foreign("idTerapia")->references("id")->on("listaTerapieRiabilitative");
