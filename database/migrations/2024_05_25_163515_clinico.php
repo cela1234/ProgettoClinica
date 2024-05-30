@@ -15,7 +15,7 @@ return new class extends Migration
             $table->unsignedBigInteger("idAccount")->primary();
             $table->string("specializzazione");
             $table->string("ruolo",45);
-            $table->foreign('idAccount')->references('id')->on('accounts')->onDelete('cascade');
+            $table->foreign('idAccount')->references('id')->on('account')->onDelete('cascade');
         });
     }
     /**

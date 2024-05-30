@@ -15,7 +15,7 @@ return new class extends Migration
             $table->unsignedBigInteger("idAccountPaziente");
             $table->unsignedBigInteger("idDisturbo");
             $table->primary(["idAccountPaziente","idDisturbo"]);
-            $table->foreign("idAccountPaziente")->references("idAccount")->on("Paziente");
+            $table->foreign("idAccountPaziente")->references("idAccount")->on("Paziente")->onDelete('cascade');
             $table->foreign("idDisturbo")->references("id")->on("listaDisturbiMotori");
         });
     }

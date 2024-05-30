@@ -15,11 +15,11 @@ return new class extends Migration
             $table->unsignedBigInteger("idAccountPaziente");
             $table->unsignedBigInteger("idDisturbo");
             $table->dateTime("DataOra");
-            $table->int("durata");
-            $table->int("intensità");
+            $table->integer("durata");
+            $table->integer("intensità");
             $table->primary(["idAccountPaziente","idDisturbo","DataOra"]);
-            $table->foreign("idAccountPaziente")->references("idAccount")->on("Paziente");
-            $table->foreign("idDisturbo")->references("idDisturbo")->on("DisturbiMotoriPaziente");
+            $table->foreign("idAccountPaziente")->references("idAccount")->on("paziente")->onDelete('cascade');
+            $table->foreign("idDisturbo")->references("idDisturbo")->on("disturbiMotoriPazienti")->onDelete('cascade');
         });
     }
     /**
