@@ -6,13 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Faq;
 class FaqController extends Controller
 {
-   
-
-
-
-
-
-    public function index() {
+   public function index() {
         $faqs = Faq::all(); // Recupera tutte le FAQ dal database
         return view('faq', compact('faqs')); // Passa le FAQ alla vista
     }
