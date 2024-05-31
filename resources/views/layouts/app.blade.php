@@ -10,7 +10,7 @@
     <div class="navbar">
         <a href="/">Home</a>
         <a href="/faq">FAQ</a>
-        <a href="/about">Chi Siamo</a>
+        <a href="/who">Chi Siamo</a>
         <a href="/login">Login</a>
     </div>
     <div class="content">
