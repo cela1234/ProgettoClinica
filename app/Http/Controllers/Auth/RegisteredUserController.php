@@ -31,21 +31,14 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'nome' => ['required', 'string', 'max:45'],
-            'cognome' => ['required', 'string', 'max:45'],
-            'dataDiNascita' => ['required', 'date', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'username' => ['required', 'string', 'min:8', 'unique:users'],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'specializzazione'=>['required', 'string','max:45'],
-            'ruolo'=>['required', 'string','max:45']
-
         ]);
-        //todo fare il model del clinico per gestire il register del clinico (quando registro un clinico prima devo creare un account, poi devo creare un clinico con idAccount l'id dell'account creato)
+
         $user = User::create([
             'name' => $request->name,
-            'surname' => $request->surname,
             'email' => $request->email,
-            'username' => $request->username,
             'password' => Hash::make($request->password),
         ]);
 
