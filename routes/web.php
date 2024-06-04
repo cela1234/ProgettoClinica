@@ -58,5 +58,5 @@ Route::middleware(['auth','role:paziente'])->group(function(){
     Route::get('/paziente/dashboard', [PazienteController::class, 'PazienteDashboard'])->name('paziente.dashboard');
 }); // End Group Paziente Middleware
 
-
+Route::get('/disorder/{id}', [DisorderController::class, 'show'])->name('disorder.show');
 
