@@ -64,7 +64,7 @@
 <body>
 
 <div class="navbar">
-  <a href="home">Home</a>
+  <a href="/">Home</a>
   <div class="right">
     <a href="login" class="button">Login</a>
     <a href="faq" class="button">FAQ</a>

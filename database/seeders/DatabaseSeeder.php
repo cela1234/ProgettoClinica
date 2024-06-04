@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table("account")->insert([
-            ['id' => 1, 'username' => 'pazipazi', 'pwd' => Hash::make('test'), 'nome' => 'mario', 'cognome' => 'ciao', 'dataDiNascita' => '2000-05-12', 'tipoAccount' => 1],
-            ['id' => 2, 'username' => 'clinclin', 'pwd' => Hash::make('test2'), 'nome' => 'mario2', 'cognome' => 'ciao2', 'dataDiNascita' => '2000-04-12', 'tipoAccount' => 2],
-            ['id' => 3, 'username' => 'adminadmin', 'pwd' => Hash::make('test'), 'nome' => 'mario', 'cognome' => 'ciao', 'dataDiNascita' => '2000-05-12', 'tipoAccount' => 3]
+        DB::table("users")->insert([
+            ['id' => 1,'username' => 'pazipazi', 'password' => Hash::make('test'), 'name' => 'Paziente', 'dataDiNascita' => '2000-05-12', 'tipoAccount' => 1,'role'=>'paziente',],
+            ['id' => 2,'username' => 'clinclin', 'password' => Hash::make('test'), 'name' => 'Clinico', 'dataDiNascita' => '2000-04-12', 'tipoAccount' => 2, 'role'=>'clinico',],
+            ['id' => 3,'username' => 'adminadmin', 'password' => Hash::make('test'), 'name' => 'Admin', 'dataDiNascita' => '2000-05-12', 'tipoAccount' => 3, 'role'=>'admin',],
         ]);
 
         DB::table('clinico')->insert([

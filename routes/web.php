@@ -3,6 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClinicoController;
+use App\Http\Controllers\PazienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +45,18 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::middleware(['auth','role:admin'])->group(function(){
+    Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+}); // End Group Admin Middleware
+
+Route::middleware(['auth','role:clinico'])->group(function(){
+    Route::get('/clinico/dashboard', [ClinicoController::class, 'ClinicoDashboard'])->name('clinico.dashboard');
+}); // End Group Clinico Middleware
+
+Route::middleware(['auth','role:paziente'])->group(function(){
+    Route::get('/paziente/dashboard', [PazienteController::class, 'PazienteDashboard'])->name('paziente.dashboard');
+}); // End Group Paziente Middleware
+
+
+

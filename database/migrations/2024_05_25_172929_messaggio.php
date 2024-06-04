@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('corpo');
             $table->unsignedBigInteger('idAccountMittente');
             $table->unsignedBigInteger('idAccountDestinatario');
-            $table->foreign('idAccountMittente')->references('id')->on('account');
-            $table->foreign('idAccountDestinatario')->references('id')->on('account');
+            $table->foreign('idAccountMittente')->references('id')->on('users');
+            $table->foreign('idAccountDestinatario')->references('id')->on('users');
         });
     }
 

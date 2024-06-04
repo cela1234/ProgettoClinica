@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('telefono',45);
             $table->string('email',45);
             $table->unsignedBigInteger('idClinico');
-            $table->foreign('idAccount')->references('id')->on('account')->onDelete('cascade');
+            $table->foreign('idAccount')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('idClinico')->references('idAccount')->on('clinico')->onDelete('cascade');
         });
     }

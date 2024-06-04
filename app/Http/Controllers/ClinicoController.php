@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 class ClinicoController extends Controller
 {
-    public function index(): View {
-        return view('clinico');
-    }
+    public function ClinicoDashboard(){
+
+        return view('clinico.clinico_dashboard');
+    
+        }//End Method
 }
