@@ -39,7 +39,8 @@
                             <li>evento3</li>
                         </ul>
                     </td>
-                    <td><a href="{{ route('disorder.show', $disorder->id) }}" class="info-btn">i</a></td>                </tr>
+                    <td><button class="info-btn">i</button></td>
+                </tr>
                 <tr>
                     <td>disturbo2</td>
                     <td></td>
@@ -50,7 +51,8 @@
                             <li>evento3</li>
                         </ul>
                     </td>
-                    <td><a href="{{ route('disorder.show', $disorder->id) }}" class="info-btn">i</a></td>                </tr>
+                    <td><button class="info-btn">i</button></td>
+                </tr>
             </tbody>
         </table>
     </div>
