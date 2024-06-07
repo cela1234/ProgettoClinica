@@ -1,0 +1,52 @@
+/* public/css/custom.css */
+
+body {
+    background-color: #86DEF1;
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: #4E9BBF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button {
+    background-color: #14426C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.login-box a {
+    color: #14426C;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
