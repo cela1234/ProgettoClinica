@@ -44,5 +44,8 @@ class DatabaseSeeder extends Seeder
         DB::table('listaDisturbiMotori')->insert([
             ['nome' => 'test', 'descrizione' => 'testtestest']
         ]);
+        DB::table('disturbiMotoriPazienti')->insert([
+            ['idAccountPaziente' => 1, 'idDisturbo' => 1]
+        ]);
     }
 }
