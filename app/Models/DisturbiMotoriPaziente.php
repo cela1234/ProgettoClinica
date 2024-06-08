@@ -9,7 +9,7 @@ class DisturbiMotoriPaziente extends Model
 {
     use HasFactory;
     protected $table = "disturbiMotoriPazienti";
-    //protected $primaryKey = ['idAccountPaziente', 'idDisturbo'];
+    protected $primaryKey = ['idAccountPaziente', 'idDisturbo'];
     protected $fillable = [
         'idAccountPaziente',
         'idDisturbo',

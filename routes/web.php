@@ -6,7 +6,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClinicoController;
 use App\Http\Controllers\PazienteController;
-
+use App\Http\Controllers\DisorderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,5 +58,5 @@ Route::middleware(['auth','role:paziente'])->group(function(){
     Route::get('/paziente/dashboard', [PazienteController::class, 'PazienteDashboard'])->name('paziente.dashboard');
 }); // End Group Paziente Middleware
 
-Route::get('/disorder/{id}', [DisorderController::class, 'show'])->name('disorder.show');
+Route::get('/disorder/{idAccountPaziente}/{idDisturbo}', [DisorderController::class, 'show'])->name('disorder.show');
 

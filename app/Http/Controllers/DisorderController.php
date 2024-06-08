@@ -7,9 +7,11 @@ use App\Models\DisturbiMotoriPaziente;
 
 class DisorderController extends Controller
 {
-    public function show($idDisturbo)
+    public function show($idAccountPaziente, $idDisturbo)
     {
-        $disorder = DisturbiMotoriPaziente::findOrFail($idDisturbo); // Fetch the disorder details
+        $disorder = DisturbiMotoriPaziente::where('idAccountPaziente', $idAccountPaziente)
+                                          ->where('idDisturbo', $idDisturbo)
+                                          ->firstOrFail();
         return view('disorder', compact('disorder'));
     }
 }

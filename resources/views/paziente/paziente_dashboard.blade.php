@@ -63,7 +63,7 @@
         <form>
             <input type="text" name="disturbo" placeholder="disturbo">
             <input type="datetime-local" name="data-ora" placeholder="data-ora">
-            <input type="text" name="durata" placeholder="durata">
+            <input type="number" name="durata" placeholder="durata (in secondi)">
             <input type="number" name="intensità" placeholder="intensità : n/10">
             <button type="submit">+</button>
         </form>
@@ -75,12 +75,16 @@
     </div>
 </div>
 @endsection
-
+<!-- ho messo le righe dopo il border radius nella classe container per centrare  il container -->
 <style>
 .container {
     background-color: #86DEF1; /* Background color */
     padding: 20px;
     border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .navbar {
     background-color: #14426C; /* Navbar color */
